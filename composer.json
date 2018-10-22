@@ -1,0 +1,16 @@
+{
+    "name": "exenjer/free-kassa-php",
+    "description": "SDK for free-kassa.ru API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ExenJer",
+            "email": "exenjers@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ExenJer\\FreeKassaPhp\\": "src/"
+        }
+    }
+}
