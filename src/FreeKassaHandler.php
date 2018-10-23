@@ -2,7 +2,7 @@
 
 namespace ExenJer\FreeKassaPhp;
 
-use ExenJer\FreeKassaPhp\Exceptions\NotValidSign;
+use ExenJer\FreeKassaPhp\Exceptions\NotValidSignException;
 use ExenJer\FreeKassaPhp\Models\Payment;
 
 /**
@@ -13,7 +13,7 @@ class FreeKassaHandler
     /**
      * @param FreeKassaSetup $freeKassa
      * @return Payment
-     * @throws NotValidSign
+     * @throws NotValidSignException
      */
     public function handlePayment(FreeKassaSetup $freeKassa): Payment
     {
@@ -33,7 +33,7 @@ class FreeKassaHandler
         if (! $freeKassa->getSignService()
             ->verifyNotificationSign($payment, $freeKassa->getFreeKassa())
         ) {
-            throw new NotValidSign($payment);
+            throw new NotValidSignException($payment);
         }
 
         return $payment;

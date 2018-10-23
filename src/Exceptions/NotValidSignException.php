@@ -9,7 +9,7 @@ use Throwable;
 /**
  * @package ExenJer\FreeKassaPhp\Exceptions
  */
-class NotValidSign extends \Exception
+class NotValidSignException extends \Exception
 {
     /**
      * @var Payment
