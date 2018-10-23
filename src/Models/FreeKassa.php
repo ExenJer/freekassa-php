@@ -2,6 +2,7 @@
 
 namespace ExenJer\FreeKassaPhp\Models;
 
+
 /**
  * @package ExenJer\FreeKassaPhp\Models
  */

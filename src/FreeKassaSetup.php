@@ -4,7 +4,6 @@ namespace ExenJer\FreeKassaPhp;
 
 
 use ExenJer\FreeKassaPhp\Models\FreeKassa;
-use ExenJer\FreeKassaPhp\Models\Payment;
 use ExenJer\FreeKassaPhp\Services\SignService;
 
 /**

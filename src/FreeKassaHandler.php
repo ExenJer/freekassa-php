@@ -3,9 +3,7 @@
 namespace ExenJer\FreeKassaPhp;
 
 use ExenJer\FreeKassaPhp\Exceptions\NotValidSign;
-use ExenJer\FreeKassaPhp\Models\FreeKassa;
 use ExenJer\FreeKassaPhp\Models\Payment;
-use ExenJer\FreeKassaPhp\Services\SignService;
 
 /**
  * @package ExenJer\FreeKassaPhp
@@ -32,13 +30,11 @@ class FreeKassaHandler
         $payment->setSign($request['SIGN']);
         $payment->setUsParameters($this->getAllUsParams());
 
-
         if (! $freeKassa->getSignService()
             ->verifyNotificationSign($payment, $freeKassa->getFreeKassa())
         ) {
             throw new NotValidSign($payment);
         }
-
 
         return $payment;
     }
@@ -52,7 +48,7 @@ class FreeKassaHandler
 
         foreach($_REQUEST as $key => $value) {
             $explodeKey = explode('_', $key);
-            if($explodeKey[0] == 'us') {
+            if ($explodeKey[0] == 'us') {
                 $result[$explodeKey[1]] = $value;
             }
         }

@@ -3,8 +3,6 @@
 namespace ExenJer\FreeKassaPhp\Models;
 
 
-use ExenJer\FreeKassaPhp\CurrencyID;
-
 class Payment
 {
     /**
