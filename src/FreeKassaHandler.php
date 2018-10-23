@@ -53,7 +53,7 @@ class FreeKassaHandler
         foreach($_REQUEST as $key => $value) {
             $explodeKey = explode('_', $key);
             if($explodeKey[0] == 'us') {
-                $result[] = $value;
+                $result[$explodeKey[1]] = $value;
             }
         }
 
