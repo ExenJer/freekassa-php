@@ -55,145 +55,145 @@ class Payment
     private $usParameters;
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getMerchantID(): int
+    public function getMerchantID(): ?int
     {
         return $this->merchantID;
     }
 
     /**
-     * @param int $merchantID
+     * @param int|null $merchantID
      */
-    public function setMerchantID(int $merchantID): void
+    public function setMerchantID(?int $merchantID): void
     {
         $this->merchantID = $merchantID;
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
 
     /**
-     * @param float $amount
+     * @param float|null $amount
      */
-    public function setAmount(float $amount): void
+    public function setAmount(?float $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getOperationID(): int
+    public function getOperationID(): ?int
     {
         return $this->operationID;
     }
 
     /**
-     * @param int $operationID
+     * @param int|null $operationID
      */
-    public function setOperationID(int $operationID): void
+    public function setOperationID(?int $operationID): void
     {
         $this->operationID = $operationID;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getOrderID(): string
+    public function getOrderID(): ?string
     {
         return $this->orderID;
     }
 
     /**
-     * @param string $orderID
+     * @param string|null $orderID
      */
-    public function setOrderID(string $orderID): void
+    public function setOrderID(?string $orderID): void
     {
         $this->orderID = $orderID;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPayerEmail(): string
+    public function getPayerEmail(): ?string
     {
         return $this->payerEmail;
     }
 
     /**
-     * @param string $payerEmail
+     * @param string|null $payerEmail
      */
-    public function setPayerEmail(string $payerEmail): void
+    public function setPayerEmail(?string $payerEmail): void
     {
         $this->payerEmail = $payerEmail;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPayerPhone(): string
+    public function getPayerPhone(): ?string
     {
         return $this->payerPhone;
     }
 
     /**
-     * @param string $payerPhone
+     * @param string|null $payerPhone
      */
-    public function setPayerPhone(string $payerPhone): void
+    public function setPayerPhone(?string $payerPhone): void
     {
         $this->payerPhone = $payerPhone;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getCurrencyID(): int
+    public function getCurrencyID(): ?int
     {
         return $this->currencyID;
     }
 
     /**
-     * @param int $currencyID
+     * @param int|null $currencyID
      */
-    public function setCurrencyID(int $currencyID): void
+    public function setCurrencyID(?int $currencyID): void
     {
         $this->currencyID = $currencyID;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getSign(): string
+    public function getSign(): ?string
     {
         return $this->sign;
     }
 
     /**
-     * @param string $sign
+     * @param string|null $sign
      */
-    public function setSign(string $sign): void
+    public function setSign(?string $sign): void
     {
         $this->sign = $sign;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getUsParameters(): array
+    public function getUsParameters(): ?array
     {
         return $this->usParameters;
     }
 
     /**
-     * @param array $usParameters
+     * @param array|null $usParameters
      */
-    public function setUsParameters(array $usParameters): void
+    public function setUsParameters(?array $usParameters): void
     {
         $this->usParameters = $usParameters;
     }

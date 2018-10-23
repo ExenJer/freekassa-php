@@ -18,7 +18,7 @@ class SignService
      */
     public function verifyNotificationSign(Payment $payment, FreeKassa $freeKassa): bool
     {
-        $sign = md5($freeKassa->getMerchantID() . ':' . $payment->getAmount() . ':' . $freeKassa->getSecret2()
+        $sign = md5($payment->getMerchantID() . ':' . $payment->getAmount() . ':' . $freeKassa->getSecret2()
         . ':' . $payment->getOrderID());
 
         return ($sign === $payment->getSign());

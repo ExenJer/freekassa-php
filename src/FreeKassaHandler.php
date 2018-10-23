@@ -22,20 +22,21 @@ class FreeKassaHandler
         $request = $_REQUEST;
 
         $payment = new Payment();
-        $payment->setMerchantID($request->MERCHANT_ID);
-        $payment->setAmount($request->AMOUNT);
-        $payment->setOperationID($request->intid);
-        $payment->setPayerEmail($request->P_EMAIL);
-        $payment->setPayerPhone($request->P_PHONE);
-        $payment->setCurrencyID($request->CUR_ID);
-        $payment->setSign($request->SIGN);
+        $payment->setMerchantID(intval($request['MERCHANT_ID']));
+        $payment->setOrderID($request['MERCHANT_ORDER_ID']);
+        $payment->setAmount(floatval($request['AMOUNT']));
+        $payment->setOperationID(intval($request['intid']));
+        $payment->setPayerEmail($request['P_EMAIL']);
+        $payment->setPayerPhone($request['P_PHONE']);
+        $payment->setCurrencyID(intval($request['CUR_ID']));
+        $payment->setSign($request['SIGN']);
         $payment->setUsParameters($this->getAllUsParams());
 
 
         if (! $freeKassa->getSignService()
             ->verifyNotificationSign($payment, $freeKassa->getFreeKassa())
         ) {
-            throw new NotValidSign();
+            throw new NotValidSign($payment);
         }
 
 
