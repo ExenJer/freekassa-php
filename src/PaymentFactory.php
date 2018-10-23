@@ -5,7 +5,7 @@ namespace ExenJer\FreeKassaPhp;
 
 use ExenJer\FreeKassaPhp\Models\FreeKassa;
 use ExenJer\FreeKassaPhp\Models\Payment;
-use ExenJer\FreeKassaPhp\Services\CallbackService;
+use ExenJer\FreeKassaPhp\Services\SignService;
 
 /**
  * @package ExenJer\FreeKassaPhp
@@ -24,7 +24,7 @@ class PaymentFactory
         $payment->setAmount($amount);
         $payment->setOrderID($order);
         $payment->setSign(
-            (new CallbackService())->createPaymentFormSign($payment, $freeKassa)
+            (new SignService())->createPaymentFormSign($payment, $freeKassa)
         );
 
         return $payment;

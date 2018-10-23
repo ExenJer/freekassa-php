@@ -9,7 +9,7 @@ use ExenJer\FreeKassaPhp\Models\Payment;
 /**
  * @package ExenJer\FreeKassaPhp\Services
  */
-class CallbackService
+class SignService
 {
     /**
      * @param Payment $payment
