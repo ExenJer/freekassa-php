@@ -12,5 +12,13 @@
         "psr-4": {
             "ExenJer\\FreeKassaPhp\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ExenJer\\FreeKassaPhp\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7"
     }
 }
