@@ -19,7 +19,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use ExenJer\FreeKassaPhp\Models\FreeKassa;
 use ExenJer\FreeKassaPhp\FreeKassaHandler;
 use ExenJer\FreeKassaPhp\FreeKassaSetup;
-use ExenJer\FreeKassaPhp\Exceptions\NotValidSign;
+use ExenJer\FreeKassaPhp\Exceptions\NotValidSignException;
 
 $freeKassa = new FreeKassa();
 $freeKassa->setMerchantID(101223);
@@ -31,7 +31,7 @@ $handler = new FreeKassaHandler();
 
 try {
     $payment = $handler->handlePayment($freeKassaSetup);
-} catch (NotValidSign $e) {
+} catch (NotValidSignException $e) {
     //Payment sign is invalid
     exit;
 }
