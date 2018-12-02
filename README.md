@@ -27,7 +27,7 @@ $freeKassa->setSecret1('first_secret');
 $freeKassa->setSecret2('second_secret');
 
 $freeKassaSetup = new FreeKassaSetup($freeKassa);
-$handler = new FreeKassaHandler();
+$handler = new FreeKassaHandler($_REQUEST);
 
 try {
     $payment = $handler->handlePayment($freeKassaSetup);
